@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: none;
+}
+
+.container {
+    width: 80%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.logo a {
+    color: white;
+}
+
+#header-bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#header-bottom nav a {
+    padding: 5px 0;
+    font-weight: 700;
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#first_section {
+    height: 100vh;
+    min-height: 850px;
+    background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2023/05/dune-part-two-poster-paul-atreides-chani.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#first_section .container {
+    padding-top: 250px;
+}
+
+#first_section_text {
+    width: 550px;
+    position: relative;
+    z-index: 1;
+    padding: 40px 30px;
+}
+
+#first_section_text h2 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#first_section_text p {
+    font-weight: 700;
+    color: white;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+#dune_photo {
+    position: absolute;
+    top: 160px;
+    right: 0;
+    width: 400px;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+#dune_photo img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    
+}
+
+.footer_color {
+    background-color: black;
+    height: 500px;
+    margin-top: 250px;
+}
+
+.footer-content {
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.footer-content-menus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+}
+
+.footer-content-menu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-content-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.wrapper {
+    padding: 0 20px;
+}
