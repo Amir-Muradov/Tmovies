@@ -4,10 +4,10 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: none;
+    font-family: "Montserrat", sans-serif;;
 }
 
-.container {
+.container{
     width: 80%;
     max-width: 1140px;
     margin: 0 auto;
@@ -19,19 +19,25 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
     z-index: 1000;
+    transition: background-color 0.5s;
 }
-
-.logo {
+.scrolled {
+    background-color: black;
+}
+.logo{
+    display: flex;
     font-size: 2.5rem;
     font-weight: 600;
 }
-
 .logo a {
-    color: white;
+    color: white; 
 }
-
+.logo img {
+    width: 50px;
+    height: auto; 
+    margin-right: 10px;
+}
 #header-bottom {
     display: flex;
     justify-content: space-between;
@@ -41,84 +47,72 @@ header {
 }
 
 #header-bottom nav a {
-    padding: 5px 0;
+    padding: 0 10px;
     font-weight: 700;
     position: relative;
     font-size: 1.5rem;
     color: white;
 }
-
-#first_section {
-    height: 100vh;
-    min-height: 850px;
-    background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2023/05/dune-part-two-poster-paul-atreides-chani.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+#header-bottom nav a:not(:last-child) {
+    margin-right: 20px; 
 }
-
-#first_section .container {
+#first_section{
+    height: 100vh;
+    min-height:850px;
+    background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2023/05/dune-part-two-poster-paul-atreides-chani.jpeg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+#first_section .container{
     padding-top: 250px;
 }
-
-#first_section_text {
+#first_section_text{
     width: 550px;
     position: relative;
     z-index: 1;
     padding: 40px 30px;
 }
-
-#first_section_text h2 {
-    font-size: 7rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: white;
-}
-
-#first_section_text p {
+#first_section_text h2{
+    font-size: 4rem;
     font-weight: 700;
     color: white;
-    margin-top: 20px;
-    font-size: 1rem;
 }
-
-#dune_photo {
+#first_section_text p{
+    font-weight: 700;
+    color: white;
+}
+#dune_photo{
     position: absolute;
     top: 160px;
     right: 0;
-    width: 400px;
-    transform: translateX(-50%);
+    width: 400px;   
     z-index: 999;
+    transform: translateX(-50%);
 }
-
-#dune_photo img {
+#dune_photo img{
     width: 100%;
-    object-fit: contain;
-    border-radius: 15px;
-    
+    height: auto;
+    border-radius: 20px;
 }
-
 .footer_color {
     background-color: black;
     height: 500px;
     margin-top: 250px;
 }
-
 .footer-content {
     text-align: center;
     padding-top: 100px;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 600;
+    color: white; 
+    font-size: 2.5rem; 
+    font-weight: 600; 
 }
-
-.footer-content-menus {
+.footer-content-menus{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
 }
-
-.footer-content-menu {
+.footer-content-menu{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -127,12 +121,65 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
 }
-
 .footer-content-menu a {
-    color: white;
+    color: white; 
     text-decoration: none;
 }
-
-.wrapper {
-    padding: 0 20px;
+#header-bottom nav a:hover {
+    color: red;
 }
+.footer-content-menu a:hover {
+    color: red; 
+}
+#header-bottom nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#header-bottom nav a::before,
+#header-bottom nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    bottom: 0;
+    transition: width 0.8s ease;
+}
+
+#header-bottom nav a::before {
+    left: 0;
+}
+
+#header-bottom nav a::after {
+    right: 0;
+    transform: scaleX(-1); 
+}
+
+#header-bottom nav a:hover::before,
+#header-bottom nav a:hover::after {
+    width: 100%;
+}
+.swiper-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; 
+  }
+  
+  .swiper-wrapper {
+    display: flex; 
+  }
+  
+  .swiper-slide {
+    flex: 0 0 auto;
+    width: 300px; 
+    margin-right: 10px;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+  
